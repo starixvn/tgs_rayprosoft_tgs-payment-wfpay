@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <RootNamespace>Tgs.Payment.WFPay.Client</RootNamespace>
+	  <Version>0.0.1</Version>
+	  <Authors>Raypro</Authors>
+	  <Company>Raypro</Company>
+	  <PackageId>Tgs.Payment.WFPay.Client</PackageId>
+	  <PackageProjectUrl>https://gitlab.com/rayprosoft/tgs-payment-wfpay</PackageProjectUrl>
+	  <RepositoryUrl>https://gitlab.com/rayprosoft/tgs-payment-wfpay</RepositoryUrl>
+	  <PackageTags>Tgs Payment WFPay</PackageTags>
+  </PropertyGroup>
+
+</Project>
