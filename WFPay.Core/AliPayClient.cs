@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Tgs.Payment.WFPay;
 
-internal class WFPayClient(
+public class WFPayClient(
     HttpClient httpClient,
     WFPaySigner signer,
     ILogger<WFPayClient> logger)

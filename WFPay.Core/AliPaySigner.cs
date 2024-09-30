@@ -15,7 +15,8 @@ public class WFPaySigner(ILogger<WFPaySigner> logger)
         var privateKeyBytes = Convert.FromBase64String(
             privateKey.Replace("-----BEGIN RSA PRIVATE KEY-----", string.Empty)
             .Replace("-----END RSA PRIVATE KEY-----", string.Empty)
-            .Replace("\n", string.Empty));
+            .Replace("\n", string.Empty)
+            .Replace("\r",string.Empty));
 
         var rsa = RSAUtils.DecodeRSAPrivateKey(privateKeyBytes);
 

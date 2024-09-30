@@ -1,6 +1,6 @@
 ﻿namespace Tgs.Payment.WFPay;
 
-internal abstract class WithdrawOrder
+public abstract class WithdrawOrder
 {
     public Guid FormId { get; init; }
 

@@ -51,7 +51,7 @@ var depositreturn = await paymentClient.DepositAsync(
 logger.LogInformation($"deposit return: {depositreturn}");*/
 
 //代付
-
+/*
 var orderNo = Guid.NewGuid();
 var withdrawSettings = new UsdtWithdrawSettings(
     merchantNo,
@@ -65,7 +65,7 @@ var withdrawReturn = await paymentClient.WithdrawAsync(
     1M,
     JsonSerializer.Serialize(withdrawSettings));
 logger.LogInformation($"Withdraw Return: {withdrawReturn}");
-
+*/
 //代收訂單查詢
 /*
 var privateKey = """
@@ -109,7 +109,7 @@ var depositQuery = await client.QueryOrderAsync(merchantNo, privateKey, queryFor
 logger.LogInformation("{depositQuery}", depositQuery);*/
 
 //餘額查詢
-/*
+
 var privateKey = """
     -----BEGIN RSA PRIVATE KEY-----
     MIIEogIBAAKCAQEAonHdMURgQR5oKoFdv0FHPQ8bML+Ou4VpCKXRhx9qF6zw/xAD
@@ -146,4 +146,4 @@ var httpClient = new HttpClient
 var client = new WFPayClient(httpClient, new WFPaySigner(NullLogger<WFPaySigner>.Instance), NullLogger<WFPayClient>.Instance);
 var balanceQuery = await client.QueryBalanceAsync(merchantNo, privateKey);
 
-logger.LogInformation("{balanceQuery}", balanceQuery);*/
+logger.LogInformation("{balanceQuery}", balanceQuery);

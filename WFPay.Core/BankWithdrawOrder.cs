@@ -1,6 +1,6 @@
 ﻿namespace Tgs.Payment.WFPay;
 
-internal class BankWithdrawOrder : WithdrawOrder
+public class BankWithdrawOrder : WithdrawOrder
 {
     /// <summary>
     /// 银行名称
