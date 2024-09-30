@@ -37,7 +37,7 @@ public class KeyEncodeTests
     -----END RSA PRIVATE KEY-----
     """;
 
-        var actual = Convert.ToBase64String(Encoding.ASCII.GetBytes(privateKey.Replace("-----BEGIN RSA PRIVATE KEY-----", string.Empty)
+        var actual = Convert.ToBase64String(Encoding.UTF8.GetBytes(privateKey.Replace("-----BEGIN RSA PRIVATE KEY-----", string.Empty)
             .Replace("-----END RSA PRIVATE KEY-----", string.Empty)
             .Replace("\n", string.Empty)
             .Replace("\r",string.Empty)));
@@ -56,7 +56,7 @@ public class KeyEncodeTests
     MIIEogIBAAKCAQEAonHdMURgQR5oKoFdv0FHPQ8bML+Ou4VpCKXRhx9qF6zw/xADzzcolO9RoVqfVYnRtBJnLHdICrwR9wLbnYL5JpivXW/cUzY7w0OtZ1FU3WP5rzTtGR6idOfUlsWO98v+cAI6v+up5zNzJnfoqVZEftcYynQSt+s6q1K5immZOhPjvRDuJyFcaijgs+1M7Lub1Loyb+fHhK4ANqigjJ6WIk6/xSl81vOTDj/WolxhvFd0Y8Y8q8F5Ug6wHyIag6PD3NF/hLbo8HedivPAT0IW3/K0YtHg1uPBaT83b/MJgi9L6CCeEDh+FtnNaigCAdq3InPyFcI+bRtBtkul5uJbAwIDAQABAoIBABBaD972uA22BtxIe2xWINqnm6ATmEWOD12ce3PzmJVbhkLWlNuV/NLJKFlqquFMZzyOIa6bLzhNaC2KLxsy5OuasQRhzzbdHbTxKhJdYIKMnsShOkCuEcJc18x5hIOzGCCkSM+q5EZuqmez6EqrcWenNUqj1oKG/jfisuSY7qCm2NAp+H0f2kQ0jULW7/ltPAvePNIjQ2cu3YhcCFG2Jjxw9sLY5pdCcEVVJDAjNP+VPZsjIgpgrKYiN8HQOycfVI768f6EHIRrDYVGIOiB/h92YBA7yp1eA+FDGd1q7QTZJiuWEO8KUK23m5kSIPJzXPUZqOAcknnNVgs9zj39AUECgYEA00ACfGUp+dPCo3CzpFuAYYKXMAWxqH4oEEIxIHyvfKRxCIJ3eKtqey3ONkijetoYn9isVAJqm8HETvzBGUSjo168tnpTj3agXSTHTejW1JbHd7B7CdCaNnAqL/XpOxrYrBGgDHsf2u7wWeES98DQmA/kRSADwxdqn2mJgI5jDKMCgYEAxNsrDrjpUoUPc7r4qpwgqp66Uv/Xm9hzXEqN50t7dg8HnjMR40G7K60qb9UvpDlaw0yOjSNky66GdGFwN8r991i7EWUcfUXbrYHu5O3klE2SyeLj+0ND3h9YWhLS4SfOpixokRLk4bWKe2L8W+rNOD1DHQAWeEsadm1cYQlc/iECgYBMOEYtV9rjVvJdQiau4IzboeCm5QcKwin2Y8uR6yruD+7woRI2KbMLqqVClMbXZqWH1wemcBDDDhCkZzHMyiU4ps/0DwLjOmv173UxuRb6MUTa/IQIMInTpniyQUnbl34h52IV3r7JoXh7FWhgl+MrWmCESF7THznLNqr0BWvbfQKBgE4Y5SwiD+68+zReqOiGqC8IacMj3NXnOV0T9tgcCg78R3lrqV0PZsIdIQjc+tmcJ3XzmVpFAGgOBSmGvo5j6f2HJi/wfSz12gEr2yrXdief3uxZJzk3pmUo6lRRw3ev4zvpwlJLvKIO87Gfw55zuJbnNwj6T+/JW+Y/3LZikJIBAoGAI/GjrKmex4w8aHNT+UtRfCCoh1chKjdBFuuz3QNSLH+j/xIx6XzgMh50HwUENRf6FwbHAzATo4ht3FyzEIwSbchTpl5YKXQzMSvHU9OS0axFJhmZ0Z11GV9S8J1lA6/OgITirkJrSwdBcbYQmkmF3I8CdZpAzVC1tj76dziUIvI=
     """;
 
-        var actual = Encoding.ASCII.GetString(Convert.FromBase64String(str));
+        var actual = Encoding.UTF8.GetString(Convert.FromBase64String(str));
 
         Assert.Equal(expected, actual);
     }
